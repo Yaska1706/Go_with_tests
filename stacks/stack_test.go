@@ -8,7 +8,7 @@ import (
 func TestStack(t *testing.T) {
 	t.Run("Push", func(t *testing.T) {
 		stack := Stack{}
-		got := stack.Push(ItemType{2, 2, 1})
+		got := stack.Push([]ItemType{})
 		want := []ItemType{2, 2, 1}
 
 		if !reflect.DeepEqual(got, want) {
