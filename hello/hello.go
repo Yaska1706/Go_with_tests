@@ -1,5 +1,10 @@
 package hello
 
+import (
+	"bytes"
+	"fmt"
+)
+
 const (
 	Spanish = "Spanish"
 	French  = "French"
@@ -28,4 +33,8 @@ func Greeting(language string) (prefix string) {
 		prefix = EnglishHelloPrefix
 	}
 	return prefix
+}
+
+func Greet(writer *bytes.Buffer, name string) {
+	fmt.Fprintf(writer, "Hello, %s", name)
 }
