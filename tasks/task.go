@@ -7,10 +7,10 @@ type task struct {
 	status bool
 }
 
-var tasks []*task
+var tasks []task
 
 //Add task
-func (t *task) AddTask(tk *task) []*task {
+func (t *task) AddTask(tk task) []task {
 	tasks = append(tasks, tk)
 	return tasks
 }
